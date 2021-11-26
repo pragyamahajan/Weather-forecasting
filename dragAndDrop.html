@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Weather Tips Website</title>
+    <link href="images/favicon.png" rel="icon">
+    <link href="drag.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="mobile-menu">
+    <label for="show-menu" class="show-menu"><span>Weather Forecasting</span><div class="lines"></div></label>
+      <input type="checkbox" id="show-menu">
+        <ul class="nav_list" id="menu">
+          <li class="nav_item" style="margin-right :60px ;">
+                <a href="index.html" ><img src="images/logo.png"></a>
+              </li>
+              <li class="nav_item">
+                <a href="index.html" class="nav_link active">Home</a>
+              </li>
+              <li class="nav_item">
+                <a href="index.html#about" class="nav_link">About</a>
+              </li>
+              <li class="nav_item">
+                <a href="dragAndDrop.html" class="nav_link">Health Tips</a>
+              </li>
+              <li class="nav_item">
+                <a href="#check" class="nav_link">abc</a>
+              </li>
+      </ul>
+    </nav>
+      <div class="card1">
+         <p align="center" >Drag any weather condition image here 👇</p>
+      </div>
+ <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="container">
+        <div class="dragDiv" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img class="dragImage sunny"
+                src="images/sunny.jpg"
+                class=draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div class="dragDiv" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img class="dragImage rainy"
+                src="images/rainy.jpg"
+                draggable="true" ondragstart="drag(event)" id="drag2">
+        </div>
+        <div class="dragDiv" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img class="dragImage winter"
+                src="images/winter.jpg" draggable="true"
+                ondragstart="drag(event)" id="drag3">
+        </div>
+        <div class="dragDiv" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img class="dragImage smog"
+                src="images/smog.jpg"
+                draggable="true" ondragstart="drag(event)" id="drag4">
+        </div>
+    </div>
+    <div class="card" style="max-width: 800px;">
+    <p class="verdict"></p>
+    </div>
+    <script src="dragAndDrop.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecasting Website</title>
+    <link href="images/favicon.png" rel="icon">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -20,25 +21,29 @@
 </head>
 
 <body>
-    <div class="nav_menu" id="nav-menu">
-        <ul class="nav_list">
-          <li class="nav_item" style="margin-right :288px ;">
-            <a href="index.html" ><img src="logo.png"></a>
-          </li>
-          <li class="nav_item">
-            <a href="index.html" class="nav_link active">Home</a>
-          </li>
-          <li class="nav_item">
-            <a href="#about" class="nav_link">About</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">xyz</a>
-          </li>
-          <li class="nav_item">
-            <a href="#check" class="nav_link">abc</a>
-          </li>
-        </ul>
-      </div>
+      <nav class="mobile-menu">
+        <label for="show-menu" class="show-menu"><span>Weather Forecasting</span><div class="lines">
+          
+        </div></label>
+          <input type="checkbox" id="show-menu">
+            <ul class="nav_list" id="menu">
+              <li class="nav_item" style="margin-right :60px ;">
+                    <a href="index.html" ><img src="images/logo.png"></a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="index.html" class="nav_link active">Home</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#about" class="nav_link">About</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="dragAndDrop.html" class="nav_link">Health Tips</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#check" class="nav_link">abc</a>
+                  </li>
+          </ul>
+        </nav>
     <section class="info" id="check">
      <div class="card">
         <div class="search">
