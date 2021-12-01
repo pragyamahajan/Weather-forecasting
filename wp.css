@@ -1,0 +1,319 @@
+body{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("https://source.unsplash.com/1600x1366/?landscape");
+  background-size: cover;
+   background-repeat: no-repeat;
+  font-size: 90%;
+}
+
+.mobile-menu {
+  display:block;
+  line-height: 1.6em;
+  font-weight: 400;
+  width:100%;
+  text-align:center;
+	position: relative;
+  margin-top:20px;
+}
+/*Strip the ul of padding and list styling*/
+.mobile-menu ul {
+	list-style-type:none;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-left:0;
+  text-align:center;
+  width:100%;
+}
+
+/*Create a horizontal list with spacing*/
+.mobile-menu li {
+	display:inline-block;
+	/*float: left;
+	margin-right: 1px;*/
+}
+
+/*Style for menu links*/
+.mobile-menu li a {
+	display:block;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+  text-transform:uppercase;
+	text-decoration: none;
+  margin-left:0px;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+}
+
+/*Style for dropdown links*/
+.mobile-menu li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+
+/*Hide dropdown links until they are needed*/
+.mobile-menu li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+.mobile-menu li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+.mobile-menu li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.mobile-menu .show-menu {
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	padding: 10px 15px;
+	display: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #0000009d;
+}
+
+.mobile-menu .show-menu span{
+   padding-left: 25px;
+}
+
+/*Hide checkbox*/
+.mobile-menu input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+.mobile-menu input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 800px){
+  .mobile-menu .lines {
+    border-bottom: 15px double #f8f8f8; 
+    border-top: 5px solid #f8f8f8; 
+    content:"";
+    height: 5px; 
+    width:20px;
+    padding-right:15px;
+  float: right;
+}
+	/*Make dropdown links appear inline*/
+	.mobile-menu ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	.mobile-menu li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	.mobile-menu ul li, .mobile-menu li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.mobile-menu .show-menu {
+		display:block;
+	}
+}
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    position: fixed;
+    top: 3rem;
+    right: -200%;
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: 0.5s;
+    z-index: 1;
+  }
+}
+
+.nav_item {
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.nav_link {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  position: relative;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.685);
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 1s;
+  text-decoration: none;
+}
+.nav_link:after, .nav_link:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid rgb(255, 255, 255);
+  transition: all 1s;
+}
+.nav_link:after {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+}
+.nav_link:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+.nav_link:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.nav_link:hover:before, .nav_link:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  .nav_list {
+    display: flex;
+    justify-content: center;
+  }
+  .nav_item {
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav_menu {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  }
+  .nav_item {
+    padding-right: 1rem;
+    font-size: 1.1rem;
+  }
+
+.card {
+  background: rgba(0, 0, 0, 0.685);
+  color: white;
+  padding: 26px;
+  border-radius: 15px;
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+.card:hover{
+box-shadow: 10px 10px 10px rgba(63, 63, 63, 0.712);
+border-radius: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  margin: 8px;
+  border-radius:50%;
+  border: none;
+  height: 34px;
+  width: 34px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover{
+  background: #7c7c7c6b; 
+}
+
+@media only screen and (min-width: 768px){
+  body{
+      font-size: 120%;
+  }
+  .card{
+      border-radius: 15px;
+      max-width: 420px;
+      
+  }
+  button{
+      height: auto;
+      width: auto;
+  }
+}
+
+.container1 {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.685);
+}
+
+.bg-primary {
+  background-color: rgba(0, 0, 0, 0.685)!important;
+  border-radius: 10px!important;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.685);
+  background-clip: padding-box;
+  border-radius: 10px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
