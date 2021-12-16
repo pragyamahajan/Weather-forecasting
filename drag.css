@@ -34,15 +34,15 @@ body {
     object-fit: cover;
 }
 .verdict{
-    width: 60vw;
+    width: 70vw;
     font-size: 1.5rem;
-    margin: 5vh auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
-.card1{
+.card{
     background: rgba(0, 0, 0, 0.685);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 300px;
   margin-right: auto;
   margin-left: auto;
